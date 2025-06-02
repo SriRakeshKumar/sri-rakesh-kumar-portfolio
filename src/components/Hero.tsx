@@ -47,13 +47,15 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Profile Image Placeholder */}
+        {/* Profile Image */}
         <div className="relative flex justify-center lg:justify-end">
           <div className="relative">
-            <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-orange-400 to-yellow-500 flex items-center justify-center shadow-2xl">
-              <div className="w-72 h-72 lg:w-88 lg:h-88 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center">
-                <span className="text-6xl lg:text-7xl text-white font-bold">RK</span>
-              </div>
+            <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-orange-400 to-yellow-500 flex items-center justify-center shadow-2xl p-2">
+              <img 
+                src="https://i.postimg.cc/VNkYHP3X/Pic-2.png" 
+                alt="Sri Rakesh Kumar"
+                className="w-full h-full rounded-full object-cover border-4 border-white/20"
+              />
             </div>
             
             {/* Floating elements */}
@@ -61,7 +63,7 @@ const Hero = () => {
               <span className="text-2xl">👋</span>
             </div>
             <div className="absolute bottom-8 -left-8 bg-white rounded-lg p-4 shadow-lg">
-              <p className="text-sm font-semibold text-gray-800">5+ Years Experience</p>
+              <p className="text-sm font-semibold text-gray-800">1+ Years Experience</p>
             </div>
           </div>
         </div>
