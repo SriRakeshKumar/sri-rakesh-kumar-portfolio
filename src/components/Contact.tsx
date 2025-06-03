@@ -15,7 +15,6 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  // Initialize EmailJS with your public key
   emailjs.init("7RKsMw2gSf78L12gR");
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -23,17 +22,16 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Send email using EmailJS
       await emailjs.send(
-        "service_tpo01hn", // Your Service ID
-        "template_haubc7k", // Your Template ID
+        "service_tpo01hn",
+        "template_haubc7k",
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
           to_name: "Sri Rakesh Kumar",
         },
-        "7RKsMw2gSf78L12gR" // Your Public Key
+        "7RKsMw2gSf78L12gR"
       );
 
       toast({
@@ -41,7 +39,6 @@ const Contact = () => {
         description: "Thank you for your message. I'll get back to you soon.",
       });
 
-      // Reset form only after successful submission
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       console.error("Failed to send email:", error);
@@ -59,10 +56,7 @@ const Contact = () => {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
@@ -71,8 +65,6 @@ const Contact = () => {
       className="py-12 md:py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Let's Work Together
@@ -84,56 +76,44 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Contact Form */}
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-2xl">
             <h3 className="text-xl md:text-2xl font-bold text-white mb-6">
               Send a Message
             </h3>
             <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
-              <div>
-                <Input
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 h-12"
-                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 h-12"
-                  required
-                  disabled={isSubmitting}
-                />
-              </div>
-              <div>
-                <Input
-                  name="email"
-                  type="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 h-12"
-                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 h-12"
-                  required
-                  disabled={isSubmitting}
-                />
-              </div>
-              <div>
-                <Textarea
-                  name="message"
-                  placeholder="Your Message"
-                  rows={4}
-                  rows={4}
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 resize-none min-h-[120px]"
-                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 resize-none min-h-[120px]"
-                  required
-                  disabled={isSubmitting}
-                />
-              </div>
+              <Input
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 h-12"
+                required
+                disabled={isSubmitting}
+              />
+              <Input
+                name="email"
+                type="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={handleChange}
+                className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 h-12"
+                required
+                disabled={isSubmitting}
+              />
+              <Textarea
+                name="message"
+                placeholder="Your Message"
+                rows={4}
+                value={formData.message}
+                onChange={handleChange}
+                className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 resize-none min-h-[120px]"
+                required
+                disabled={isSubmitting}
+              />
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-orange-500 hover:bg-orange-600 disabled:bg-orange-400 text-white py-3 h-12 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 disabled:transform-none"
                 className="w-full bg-orange-500 hover:bg-orange-600 disabled:bg-orange-400 text-white py-3 h-12 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 disabled:transform-none"
               >
                 {isSubmitting ? (
@@ -148,7 +128,7 @@ const Contact = () => {
             </form>
           </div>
 
-          {/* Contact Information */}
+          {/* Contact Info */}
           <div className="space-y-6 md:space-y-8">
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-2xl">
               <h3 className="text-xl md:text-2xl font-bold text-white mb-6">
@@ -157,10 +137,8 @@ const Contact = () => {
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Mail className="h-6 w-6 text-white" />
                   </div>
-                  <div className="min-w-0 flex-1">
                   <div className="min-w-0 flex-1">
                     <p className="text-white font-semibold">Email</p>
                     <p className="text-blue-100 text-sm md:text-base break-all">
@@ -168,9 +146,7 @@ const Contact = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Phone className="h-6 w-6 text-white" />
                   </div>
