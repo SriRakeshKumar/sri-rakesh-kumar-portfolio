@@ -32,6 +32,7 @@ const Hero = () => {
               Sri Rakesh Kumar
             </h1>
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-200 font-semibold">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-200 font-semibold">
               Full-Stack Developer
             </h2>
             <p className="text-base md:text-xl text-blue-100 max-w-lg mx-auto lg:mx-0">
@@ -48,7 +49,7 @@ const Hero = () => {
               className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
             >
               View Projects
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
             </Button>
             <Button
               size="lg"
@@ -63,6 +64,7 @@ const Hero = () => {
 
         {/* Profile Image */}
         <div className="relative flex justify-center order-1 lg:order-2 lg:justify-end">
+        <div className="relative flex justify-center order-1 lg:order-2 lg:justify-end">
           <div className="relative">
             <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-orange-400 to-yellow-500 flex items-center justify-center shadow-2xl p-2">
               <img
@@ -73,6 +75,8 @@ const Hero = () => {
             </div>
 
             {/* Floating elements */}
+            <div className="absolute -top-2 -right-2 md:-top-4 md:-right-4 bg-white rounded-lg p-2 md:p-3 shadow-lg animate-bounce">
+              <span className="text-lg md:text-2xl">👋</span>
             <div className="absolute -top-2 -right-2 md:-top-4 md:-right-4 bg-white rounded-lg p-2 md:p-3 shadow-lg animate-bounce">
               <span className="text-lg md:text-2xl">👋</span>
             </div>

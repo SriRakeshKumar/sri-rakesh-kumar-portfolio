@@ -73,6 +73,8 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Let's Work Together
           </h2>
           <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto px-4">
@@ -81,6 +83,7 @@ const Contact = () => {
           </p>
         </div>
 
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Contact Form */}
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-2xl">
@@ -95,6 +98,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 h-12"
+                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 h-12"
                   required
                   disabled={isSubmitting}
                 />
@@ -107,6 +111,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 h-12"
+                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 h-12"
                   required
                   disabled={isSubmitting}
                 />
@@ -116,8 +121,10 @@ const Contact = () => {
                   name="message"
                   placeholder="Your Message"
                   rows={4}
+                  rows={4}
                   value={formData.message}
                   onChange={handleChange}
+                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 resize-none min-h-[120px]"
                   className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 resize-none min-h-[120px]"
                   required
                   disabled={isSubmitting}
@@ -126,6 +133,7 @@ const Contact = () => {
               <Button
                 type="submit"
                 disabled={isSubmitting}
+                className="w-full bg-orange-500 hover:bg-orange-600 disabled:bg-orange-400 text-white py-3 h-12 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 disabled:transform-none"
                 className="w-full bg-orange-500 hover:bg-orange-600 disabled:bg-orange-400 text-white py-3 h-12 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 disabled:transform-none"
               >
                 {isSubmitting ? (
@@ -149,8 +157,10 @@ const Contact = () => {
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Mail className="h-6 w-6 text-white" />
                   </div>
+                  <div className="min-w-0 flex-1">
                   <div className="min-w-0 flex-1">
                     <p className="text-white font-semibold">Email</p>
                     <p className="text-blue-100 text-sm md:text-base break-all">
@@ -160,6 +170,7 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Phone className="h-6 w-6 text-white" />
                   </div>
