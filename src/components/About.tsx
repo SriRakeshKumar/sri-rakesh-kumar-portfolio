@@ -1,4 +1,3 @@
-
 import { GraduationCap, Briefcase } from "lucide-react";
 
 const About = () => {
@@ -10,7 +9,10 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            I am a Full-Stack Developer with strong expertise in modern technologies like React, Node.js, GraphQL, Web Sockets, and more. I thrive on building dynamic web applications and scalable solutions that enhance user experience and business performance.
+            I am a Full-Stack Developer with strong expertise in modern
+            technologies like React, Node.js, GraphQL, Web Sockets, and more. I
+            thrive on building dynamic web applications and scalable solutions
+            that enhance user experience and business performance.
           </p>
         </div>
 
@@ -34,7 +36,9 @@ const About = () => {
                   <h4 className="text-lg font-semibold text-gray-900">
                     B.Sc. Animation
                   </h4>
-                  <p className="text-gray-600">Adikavi Nannayya University, Kakinada</p>
+                  <p className="text-gray-600">
+                    Adikavi Nannayya University, Kakinada
+                  </p>
                   <p className="text-sm text-gray-500">2018 – 2021 • 87%</p>
                 </div>
               </div>
@@ -52,24 +56,49 @@ const About = () => {
                 <h4 className="text-lg font-semibold text-gray-900">
                   Full-Time Developer
                 </h4>
-                <p className="text-gray-600">Blue Spire Digital Pvt Ltd, Hyderabad</p>
-                <p className="text-sm text-gray-500">Oct 2024 – Present</p>
-                <p className="text-gray-700 mt-2">
-                  Leading full-stack development projects, implementing modern web technologies, 
-                  and delivering scalable solutions for enterprise clients.
+                <p className="text-gray-600">
+                  Blue Spire Digital Pvt Ltd, Hyderabad
                 </p>
+                <p className="text-sm text-gray-500">Oct 2024 – Present</p>
+                <div className="text-gray-700 mt-2">
+                  <ul className="list-disc list-inside space-y-2">
+                    <li>
+                      Contributed to the development of an in-house Human
+                      Resource Management System (HRMS), focusing primarily on
+                      the Payroll module
+                    </li>
+                    <li>
+                      Designed and implemented the Payroll Processing Workflow
+                      with automated validation of pending requests in Leave,
+                      Attendance, and Reimbursements modules
+                    </li>
+                    <li>
+                      Developed error-handling mechanism to halt pay run and
+                      report validation issues for resolution
+                    </li>
+                    <li>
+                      Collaborated with the UI/UX team to develop Timesheets
+                      module mockups aligning with user requirements and
+                      business workflows
+                    </li>
+                    <li>
+                      Developed reusable React components including Custom Table
+                      with pagination and dynamic column rendering
+                    </li>
+                    <li>
+                      Created Tabs, Status Bars, and other UI widgets to promote
+                      code reusability and maintainability across modules
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl p-6 text-white text-center">
-                <div className="text-3xl font-bold">5+</div>
+                <div className="text-3xl font-bold">1+</div>
                 <div className="text-sm opacity-90">Years Experience</div>
-              </div>
-              <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-xl p-6 text-white text-center">
-                <div className="text-3xl font-bold">50+</div>
-                <div className="text-sm opacity-90">Projects Completed</div>
               </div>
             </div>
           </div>
